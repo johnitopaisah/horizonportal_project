@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class Product(models.Model):
+class BusinessProfile(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     business_name = models.CharField(max_length=255)
     description = models.TextField()
