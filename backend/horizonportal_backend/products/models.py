@@ -1,9 +1,9 @@
 from django.db import models
-from business.models import BusinessProfile
+from business.models import Product
 
 
 class Product(models.Model):
-    business = models.ForeignKey(BusinessProfile, on_delete=models.CASCADE, related_name='product')
+    business = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product')
     name = models.CharField(max_length=255)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
